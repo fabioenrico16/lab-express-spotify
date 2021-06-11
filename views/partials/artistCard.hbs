@@ -1,0 +1,21 @@
+<div class="card text-center text-white bg-secondary mb-3" style="width: 20rem; height:30rem">
+  {{#with this.images}}
+    {{#each this}}
+      {{#if @first}}
+        <img class="card-img-center w-100 h-75" src="{{url}}" alt="Card image cap" />
+      {{/if}}
+    {{/each}}
+  {{/with}}
+  <div class="card-body">
+    <h5 class="card-title">{{this.name}}</h5>
+ 
+    {{#if this.album_group}}
+      <a class="btn btn-sm btn-danger" href="/tracks/{{this.id}}">View tracks</a>
+    {{else}}
+      <a class="btn btn-sm btn-danger" href="/albums/{{this.id}}">View albums</a>
+    {{/if}}
+
+  </div>
+
+
+</div>

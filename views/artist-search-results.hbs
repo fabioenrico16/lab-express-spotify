@@ -1,0 +1,17 @@
+
+<div class="container">
+<br>
+    <div class="row">
+    <div class="col text-right">
+        <a href="/" class="btn btn-sm btn-dark" role="button">Go Home</a>
+    </div>
+    </div>
+    <br>
+    <h3 style="text-align: center;">Artists</h3>
+    <br>
+    <div class="card-columns mb-3">
+        {{#each items}}
+            {{> artistCard this}}
+        {{/each}}
+    </div>
+</div>
